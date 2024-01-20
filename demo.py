@@ -13,12 +13,6 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 
 engine.setProperty('voice', voices[1].id)
-# AI function of chatGPT
-
-
-    # api_key = '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'
-    
-
     
 def speak(audio):
     engine.say(audio)
@@ -36,7 +30,7 @@ def wishMe():
     else:
         speak("Good Evening!")  
 
-    speak("I am Siya Sir. Please tell me. what can I do??")       
+    speak("Please tell me. what can I do??")       
 
 def takeCommand():
    
@@ -125,7 +119,22 @@ if __name__ == '__main__':
             elif 'break' in query:
                 speak("Thanks sir!!")
                 break
+            
+            # some intraction commands
+            elif 'how are you' in query :
+                speak("i'm fine thanks for asking.." )
+                speak("how can i help you ??")
+            elif 'who are you' in query or 'hu r u' in query :
+                speak("i'm a virtual assistant " )
+                speak("created by you ,  using python")
+            elif 'what is your name' in query or "what's your name" in query :
+                speak("my name is jarvis" )
+                speak("how can i help you ??")
+            elif 'its incorrect' in query or "it's incorrect" in query or 'glat hai' in query or 'its wrong' in query:
+                speak("sorry sir.." )
                 
+            elif 'thanks' in query or 'cool' in query or 'thats nice' in query or "good job" in query :
+                speak("its my pleasure" )
     else:
         print ("im sleepping")   
     
